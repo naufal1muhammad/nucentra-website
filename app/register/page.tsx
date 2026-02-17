@@ -236,7 +236,7 @@ export default function RegisterPage() {
                   <span>
                     I understand that my health information will be handled in
                     accordance with the{" "}
-                    <Link href="#" className="font-semibold text-blue-600">
+                    <Link href="#" className="font-semibold text-secondary">
                       Privacy Policy
                     </Link>{" "}
                     and HIPAA regulations. I certify that the information
@@ -259,7 +259,7 @@ export default function RegisterPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full rounded-2xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="w-full rounded-2xl bg-secondary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-secondary-hover disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Registration →"}
                 </button>
@@ -307,8 +307,8 @@ export default function RegisterPage() {
           outline: none;
         }
         .input:focus {
-          border-color: rgb(59 130 246);
-          box-shadow: 0 0 0 3px rgb(59 130 246 / 0.15);
+          border-color: var(--secondary);
+          box-shadow: 0 0 0 3px color-mix(in oklab, var(--secondary) 20%, transparent);
           background: white;
         }
       `}</style>
@@ -341,16 +341,16 @@ function StepDot({
 }) {
   const circleClass =
     state === "active"
-      ? "bg-blue-600 text-white"
+      ? "bg-secondary text-white"
       : state === "upcoming"
-        ? "border border-blue-600 bg-white text-blue-700"
+        ? "border border-secondary bg-white text-secondary-ink"
         : "bg-slate-200 text-slate-500";
 
   const labelClass =
     state === "active"
-      ? "text-blue-700"
+      ? "text-secondary-ink"
       : state === "upcoming"
-        ? "text-blue-700"
+        ? "text-secondary-ink"
         : "text-slate-500";
 
   return (
@@ -377,7 +377,7 @@ function Section({
   return (
     <section>
       <div className="flex items-center gap-3">
-        <div className="grid h-10 w-10 place-items-center rounded-xl bg-blue-50 text-blue-700">
+        <div className="grid h-10 w-10 place-items-center rounded-xl bg-secondary-soft text-secondary-ink">
           {icon}
         </div>
         <h2 className="text-base font-semibold text-slate-900">{title}</h2>

@@ -7,21 +7,21 @@ import { CheckIcon, ShieldIcon } from "../_components/ui/icons";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-primary text-slate-900">
       <MarketingHeader />
 
       <main>
         {/* Hero */}
-        <section className="bg-gradient-to-b from-white to-slate-50">
+        <section className="bg-gradient-to-b from-primary to-slate-50">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-20">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+              <div className="inline-flex items-center gap-2 rounded-full bg-secondary-soft px-3 py-1 text-xs font-semibold text-secondary-ink">
                 <ShieldIcon className="h-4 w-4" />
                 ABOUT NUCENTRA
               </div>
               <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
                 Built for proactive prevention,
-                <span className="text-blue-600"> backed by clinicians</span>.
+                <span className="text-secondary"> backed by clinicians</span>.
               </h1>
               <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
                 Nucentra helps people reduce colorectal cancer risk through
@@ -32,7 +32,7 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Link
                   href="/register"
-                  className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
+                  className="inline-flex items-center justify-center rounded-full bg-secondary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-secondary-hover"
                 >
                   Start Registration
                 </Link>
@@ -79,7 +79,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-6xl px-6 py-16">
             <div className="grid gap-8 lg:grid-cols-2">
               <div>
-                <p className="text-[11px] font-semibold tracking-[0.22em] text-blue-600">
+                <p className="text-[11px] font-semibold tracking-[0.22em] text-secondary">
                   OUR APPROACH
                 </p>
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight">
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 </div>
                 <Link
                   href="/register"
-                  className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
+                  className="rounded-full bg-secondary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-secondary-hover"
                 >
                   Register Now
                 </Link>
@@ -148,7 +148,7 @@ export default function AboutPage() {
 function Bullet({ children }: { children: ReactNode }) {
   return (
     <div className="flex items-start gap-3">
-      <span className="mt-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-50 text-blue-700">
+      <span className="mt-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-secondary-soft text-secondary-ink">
         <CheckIcon className="h-3.5 w-3.5" />
       </span>
       <span>{children}</span>
