@@ -12,21 +12,21 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-primary text-slate-900">
       <MarketingHeader />
 
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+        <section className="relative overflow-hidden bg-gradient-to-b from-primary to-slate-50">
           <div className="mx-auto max-w-6xl px-6 py-16 lg:flex lg:items-center lg:gap-12 lg:py-20">
             <div className="max-w-xl">
-              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-600" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-secondary-soft px-3 py-1 text-xs font-semibold text-secondary-ink">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-secondary" />
                 LEADING COLORECTAL SURVEILLANCE
               </div>
 
               <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Proactive <span className="text-blue-600">Colorectal Health</span>
+                Proactive <span className="text-secondary">Colorectal Health</span>
                 <br className="hidden sm:block" />
                 Management
               </h1>
@@ -40,7 +40,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Link
                   href="/register"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-secondary-hover"
                 >
                   Check My Eligibility
                   <ArrowRightIcon className="h-4 w-4" />
@@ -55,7 +55,7 @@ export default function HomePage() {
 
               <div className="mt-8 flex items-center gap-3 text-xs text-slate-500">
                 <div className="flex items-center gap-1">
-                  <span className="h-2.5 w-2.5 rounded-full bg-blue-600" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-secondary" />
                   <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
                   <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
                 </div>
@@ -103,7 +103,7 @@ export default function HomePage() {
         {/* Promise */}
         <section id="services" className="bg-slate-50">
           <div className="mx-auto max-w-6xl px-6 py-16">
-            <p className="text-center text-[11px] font-semibold tracking-[0.22em] text-blue-600">
+            <p className="text-center text-[11px] font-semibold tracking-[0.22em] text-secondary">
               THE PROMISE
             </p>
             <h2 className="mt-3 text-center text-3xl font-semibold tracking-tight">
@@ -147,7 +147,7 @@ export default function HomePage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute bottom-6 right-6 max-w-[260px] rounded-2xl bg-blue-600 px-5 py-4 text-white shadow-lg">
+                <div className="absolute bottom-6 right-6 max-w-[260px] rounded-2xl bg-secondary px-5 py-4 text-white shadow-lg">
                   <p className="text-sm font-semibold">“95% Early Detection Rate”</p>
                   <p className="mt-1 text-xs leading-5 text-white/90">
                     In clinical trials using our integrated surveillance protocol.
@@ -184,7 +184,7 @@ export default function HomePage() {
         {/* CTA */}
         <section className="bg-slate-50">
           <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="rounded-3xl bg-blue-600 px-6 py-14 text-center text-white shadow-xl sm:px-12">
+            <div className="rounded-3xl bg-secondary px-6 py-14 text-center text-white shadow-xl sm:px-12">
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
                 Ready to prioritize your colorectal health?
               </h2>
@@ -197,7 +197,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
                   href="/register"
-                  className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-50"
+                  className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-secondary-ink shadow-sm transition hover:bg-secondary-soft"
                 >
                   Register Now
                 </Link>
@@ -245,7 +245,7 @@ function FeatureCard({
 }) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="grid h-10 w-10 place-items-center rounded-xl bg-blue-50 text-blue-700">
+      <div className="grid h-10 w-10 place-items-center rounded-xl bg-secondary-soft text-secondary-ink">
         {icon}
       </div>
       <h3 className="mt-4 text-sm font-semibold text-slate-900">{title}</h3>
@@ -265,7 +265,7 @@ function Step({
 }) {
   return (
     <div className="flex gap-4">
-      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white shadow-sm">
+      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-white shadow-sm">
         {n}
       </div>
       <div>
