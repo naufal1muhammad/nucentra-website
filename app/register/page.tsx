@@ -3,11 +3,10 @@
 import Link from "next/link";
 import type { FormEvent, ReactNode } from "react";
 import { useMemo, useState } from "react";
+import { MarketingHeader } from "../_components/marketing/marketing-header";
 import {
   ClipboardIcon,
-  LockIcon,
   MailIcon,
-  ShieldIcon,
   UserIcon,
 } from "../_components/ui/icons";
 
@@ -68,28 +67,7 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      {/* Top bar */}
-      <header className="border-b border-slate-100 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-blue-600 text-white shadow-sm">
-              <ShieldIcon className="h-5 w-5" />
-            </span>
-            <span className="text-sm font-semibold tracking-tight">Nucentra</span>
-          </Link>
-
-          <div className="flex items-center gap-4 text-xs text-slate-500">
-            <span className="hidden items-center gap-1.5 sm:inline-flex">
-              <ShieldIcon className="h-4 w-4 text-slate-500" />
-              HIPAA Compliant
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <LockIcon className="h-4 w-4 text-slate-500" />
-              256-bit Encrypted
-            </span>
-          </div>
-        </div>
-      </header>
+      <MarketingHeader />
 
       <main className="mx-auto max-w-6xl px-6 py-12">
         <div className="mx-auto max-w-3xl text-center">
