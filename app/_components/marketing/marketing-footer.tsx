@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "./logo";
+import { FooterLogo } from "./logo";
 
 const footer = {
   Services: [
@@ -29,7 +29,7 @@ export function MarketingFooter() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="space-y-4">
             <div className="[&_span]:text-white">
-              <Logo />
+              <FooterLogo />
             </div>
             <p className="text-sm leading-6 text-slate-400">
               Dedicated to advancing colorectal health through proactive

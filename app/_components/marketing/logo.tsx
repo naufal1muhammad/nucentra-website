@@ -15,3 +15,18 @@ export function Logo({ href = "/" }: { href?: string }) {
     </Link>
   );
 }
+
+export function FooterLogo({ href = "/" }: { href?: string }) {
+  return (
+    <Link href={href} className="flex items-center">
+      <Image
+        src="/nucentra-icon-bw.png"
+        alt="Nucentra"
+        width={80}
+        height={80}
+        className="h-8 w-auto"
+        priority
+      />
+    </Link>
+  );
+}
