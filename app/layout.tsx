@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nucentra",
   description: "Proactive colorectal health management and surveillance.",
+  icons: {
+    icon: "/nucentra-icon.png",
+    shortcut: "/nucentra-icon.png",
+    apple: "/nucentra-icon.png",
+  },
 };
 
 export default function RootLayout({
