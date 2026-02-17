@@ -7,8 +7,8 @@ export function Logo({ href = "/" }: { href?: string }) {
       <Image
         src="/nucentra-logo.png"
         alt="Nucentra"
-        width={140}
-        height={32}
+        width={300}
+        height={70}
         className="h-8 w-auto"
         priority
       />
