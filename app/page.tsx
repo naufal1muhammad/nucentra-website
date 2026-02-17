@@ -1,65 +1,277 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { ReactNode } from "react";
+import { MarketingFooter } from "./_components/marketing/marketing-footer";
+import { MarketingHeader } from "./_components/marketing/marketing-header";
+import {
+  ArrowRightIcon,
+  BellIcon,
+  ClipboardIcon,
+  PulseIcon,
+} from "./_components/ui/icons";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen bg-white text-slate-900">
+      <MarketingHeader />
+
+      <main>
+        {/* Hero */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+          <div className="mx-auto max-w-6xl px-6 py-16 lg:flex lg:items-center lg:gap-12 lg:py-20">
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-600" />
+                LEADING COLORECTAL SURVEILLANCE
+              </div>
+
+              <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Proactive <span className="text-blue-600">Colorectal Health</span>
+                <br className="hidden sm:block" />
+                Management
+              </h1>
+
+              <p className="mt-4 max-w-lg text-base leading-7 text-slate-600">
+                Advanced diagnostic surveillance designed to detect risks early.
+                Take control of your long-term health with expert-led clinical
+                monitoring and personalized screening protocols.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Link
+                  href="/register"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
+                >
+                  Check My Eligibility
+                  <ArrowRightIcon className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/#how-it-works"
+                  className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
+                >
+                  Learn More
+                </Link>
+              </div>
+
+              <div className="mt-8 flex items-center gap-3 text-xs text-slate-500">
+                <div className="flex items-center gap-1">
+                  <span className="h-2.5 w-2.5 rounded-full bg-blue-600" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+                </div>
+                <span>Trusted by over 15,000+ patients nationwide</span>
+              </div>
+            </div>
+
+            <div className="relative mt-12 w-full max-w-xl lg:mt-0">
+              <div className="rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
+                <div className="relative h-[340px] w-full overflow-hidden rounded-xl bg-slate-100">
+                  <Image
+                    src="/hero.png"
+                    alt="Clinician reviewing a digital health dashboard"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust strip */}
+        <section className="border-t border-slate-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-10">
+            <p className="text-center text-[11px] font-semibold tracking-[0.18em] text-slate-400">
+              CLINICALLY CERTIFIED &amp; REGULATED
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold tracking-widest text-slate-200">
+              {[
+                "HEALTH-CERT",
+                "MED-CORE",
+                "BIO-GUARD",
+                "PRIME-DIAG",
+              ].map((t) => (
+                <span key={t} className="text-slate-300">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Promise */}
+        <section id="services" className="bg-slate-50">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <p className="text-center text-[11px] font-semibold tracking-[0.22em] text-blue-600">
+              THE PROMISE
+            </p>
+            <h2 className="mt-3 text-center text-3xl font-semibold tracking-tight">
+              Our Commitment to Your Longevity
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-7 text-slate-600">
+              We bridge the gap between reactive treatment and proactive
+              prevention with comprehensive colorectal monitoring.
+            </p>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <FeatureCard
+                icon={<PulseIcon className="h-5 w-5" />}
+                title="Advanced Diagnostics"
+                desc="Utilizing cutting-edge biomarker screening and non-invasive initial assessments for a comprehensive health profile."
+              />
+              <FeatureCard
+                icon={<ClipboardIcon className="h-5 w-5" />}
+                title="Expert Oversight"
+                desc="Every report is reviewed by board-certified gastroenterologists to ensure the highest standard of clinical care."
+              />
+              <FeatureCard
+                icon={<BellIcon className="h-5 w-5" />}
+                title="Real-time Alerts"
+                desc="Continuous monitoring means we notify you immediately if any risks are detected, ensuring timely intervention."
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* How it works */}
+        <section id="how-it-works" className="bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-16 lg:py-20">
+            <div className="grid items-center gap-10 lg:grid-cols-2">
+              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 shadow-xl">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/device-illustration.svg"
+                    alt="Medical device illustration"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute bottom-6 right-6 max-w-[260px] rounded-2xl bg-blue-600 px-5 py-4 text-white shadow-lg">
+                  <p className="text-sm font-semibold">“95% Early Detection Rate”</p>
+                  <p className="mt-1 text-xs leading-5 text-white/90">
+                    In clinical trials using our integrated surveillance protocol.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-semibold tracking-tight">
+                  The Path to Prevention
+                </h2>
+                <div className="mt-8 space-y-6">
+                  <Step
+                    n={1}
+                    title="Registration & History"
+                    desc="Complete a comprehensive medical questionnaire and risk factor assessment to customize your plan."
+                  />
+                  <Step
+                    n={2}
+                    title="Screening Schedule"
+                    desc="Receive a tailored surveillance timeline including home-based tests and clinical appointments."
+                  />
+                  <Step
+                    n={3}
+                    title="Ongoing Monitoring"
+                    desc="Continuous analysis of results with immediate specialist consultation if any red flags appear."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="rounded-3xl bg-blue-600 px-6 py-14 text-center text-white shadow-xl sm:px-12">
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Ready to prioritize your colorectal health?
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/85">
+                Join thousands of patients who have chosen proactive monitoring
+                over reactive treatment. Your journey to peace of mind starts
+                today.
+              </p>
+
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link
+                  href="/register"
+                  className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-50"
+                >
+                  Register Now
+                </Link>
+                <Link
+                  href="/#"
+                  className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-white/15"
+                >
+                  View Pricing Plans
+                </Link>
+              </div>
+
+              <p className="mt-6 text-xs text-white/80">
+                HIPAA Compliant &bull; Secure Data Management
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Resources anchor (placeholder) */}
+        <section id="resources" className="bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-12">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-600">
+              <span className="font-semibold text-slate-900">Resources</span>
+              <span className="ml-2">
+                Educational materials and FAQs can live here.
+              </span>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <MarketingFooter />
+    </div>
+  );
+}
+
+function FeatureCard({
+  icon,
+  title,
+  desc,
+}: {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="grid h-10 w-10 place-items-center rounded-xl bg-blue-50 text-blue-700">
+        {icon}
+      </div>
+      <h3 className="mt-4 text-sm font-semibold text-slate-900">{title}</h3>
+      <p className="mt-2 text-sm leading-6 text-slate-600">{desc}</p>
+    </div>
+  );
+}
+
+function Step({
+  n,
+  title,
+  desc,
+}: {
+  n: number;
+  title: string;
+  desc: string;
+}) {
+  return (
+    <div className="flex gap-4">
+      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white shadow-sm">
+        {n}
+      </div>
+      <div>
+        <h3 className="text-sm font-semibold text-slate-900">{title}</h3>
+        <p className="mt-1 text-sm leading-6 text-slate-600">{desc}</p>
+      </div>
     </div>
   );
 }
