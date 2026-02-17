@@ -77,7 +77,6 @@ export default function RegisterPage() {
             complete this form to begin your colorectal health surveillance.
           </p>
 
-          <Stepper />
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl">
@@ -312,55 +311,6 @@ export default function RegisterPage() {
           background: white;
         }
       `}</style>
-    </div>
-  );
-}
-
-function Stepper() {
-  return (
-    <div className="mx-auto mt-8 max-w-xl">
-      <div className="flex items-center justify-center">
-        <StepDot n={1} label="Personal" state="active" />
-        <div className="h-px w-24 bg-slate-200" />
-        <StepDot n={2} label="Health" state="upcoming" />
-        <div className="h-px w-24 bg-slate-200" />
-        <StepDot n={3} label="Confirm" state="disabled" />
-      </div>
-    </div>
-  );
-}
-
-function StepDot({
-  n,
-  label,
-  state,
-}: {
-  n: number;
-  label: string;
-  state: "active" | "upcoming" | "disabled";
-}) {
-  const circleClass =
-    state === "active"
-      ? "bg-secondary text-white"
-      : state === "upcoming"
-        ? "border border-secondary bg-white text-secondary-ink"
-        : "bg-slate-200 text-slate-500";
-
-  const labelClass =
-    state === "active"
-      ? "text-secondary-ink"
-      : state === "upcoming"
-        ? "text-secondary-ink"
-        : "text-slate-500";
-
-  return (
-    <div className="flex flex-col items-center">
-      <div
-        className={`grid h-9 w-9 place-items-center rounded-full text-sm font-semibold ${circleClass}`}
-      >
-        {n}
-      </div>
-      <div className={`mt-2 text-xs font-semibold ${labelClass}`}>{label}</div>
     </div>
   );
 }
