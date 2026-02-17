@@ -79,29 +79,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Trust strip */}
-        <section className="border-t border-slate-100 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-10">
-            <p className="text-center text-[11px] font-semibold tracking-[0.18em] text-slate-400">
-              CLINICALLY CERTIFIED &amp; REGULATED
-            </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold tracking-widest text-slate-200">
-              {[
-                "HEALTH-CERT",
-                "MED-CORE",
-                "BIO-GUARD",
-                "PRIME-DIAG",
-              ].map((t) => (
-                <span key={t} className="text-slate-300">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Promise */}
-        <section id="services" className="bg-slate-50">
+        <section id="services" className="bg-white">
           <div className="mx-auto max-w-6xl px-6 py-16">
             <p className="text-center text-[11px] font-semibold tracking-[0.22em] text-secondary">
               THE PROMISE
@@ -135,13 +114,13 @@ export default function HomePage() {
         </section>
 
         {/* How it works */}
-        <section id="how-it-works" className="bg-white">
+        <section id="how-it-works" className="bg-slate-50">
           <div className="mx-auto max-w-6xl px-6 py-16 lg:py-20">
             <div className="grid items-center gap-10 lg:grid-cols-2">
               <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 shadow-xl">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/device-illustration.svg"
+                    src="/device-illustration.png"
                     alt="Medical device illustration"
                     fill
                     className="object-cover"

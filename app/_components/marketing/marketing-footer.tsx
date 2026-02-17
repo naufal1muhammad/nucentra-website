@@ -24,7 +24,7 @@ const footer = {
 
 export function MarketingFooter() {
   return (
-    <footer className="bg-slate-950 text-slate-200">
+    <footer className="bg-slate-900 text-slate-200">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="space-y-4">
@@ -67,8 +67,6 @@ export function MarketingFooter() {
         <div className="mt-12 border-t border-slate-900 pt-6 text-xs text-slate-500">
           <p>
             © {new Date().getFullYear()} Nucentra. All rights reserved.
-            Professional medical advice should always be sought for specific
-            conditions.
           </p>
         </div>
       </div>

@@ -7,8 +7,8 @@ export function Logo({ href = "/" }: { href?: string }) {
       <Image
         src="/nucentra-logo.png"
         alt="Nucentra"
-        width={300}
-        height={70}
+        width={250}
+        height={60}
         className="h-10 w-auto md:h-12 lg:h-14"
         priority
       />
@@ -20,7 +20,7 @@ export function FooterLogo({ href = "/" }: { href?: string }) {
   return (
     <Link href={href} className="flex items-center">
       <Image
-        src="/nucentra-icon-bww.png"
+        src="/nucentra-icon-slate.png"
         alt="Nucentra"
         width={80}
         height={80}
